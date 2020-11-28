@@ -1,0 +1,20 @@
+package uk.ac.rhul.cs2800;
+
+/**
+ * BadTypeException called when an Entry is resolved to the wrong type.
+ * 
+ * @author Keiru
+ */
+public class BadTypeException extends Exception {
+
+  public BadTypeException() {}
+
+  /**
+   * BadTypeException method when passing a string.
+   * 
+   * @param message Inherits the methods from Exception for printing an explanatory string.
+   */
+  public BadTypeException(String message) {
+    super(message);
+  }
+}
