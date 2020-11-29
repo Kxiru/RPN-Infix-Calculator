@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
+
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -36,19 +37,19 @@ class NumStackTest {
     assertThrows(EmptyStackException.class, () -> numStack.pop(),
         "Unable to pop from an empty stack.");
   }
-  
+
   @Test // Test 4 - Tests whether Stack Pops.
   void numStackPop() throws BadTypeException {
     numStack.push(0.5f);
     assertEquals(numStack.pop(), 0.5f, "The Stack is empty when initiated.");
   }
-  
+
   @Test // Test 4 - Tests whether Stack Pops the top value.
   void numStackPop2() throws BadTypeException {
     numStack.push(0.75f);
     assertEquals(numStack.pop(), 0.75f, "The Stack is empty when initiated.");
   }
-  
+
   @Test // Test 5 - Tests whether Stack Pops multiple values.
   void numStackPopMulti() throws BadTypeException {
     numStack.push(0.75f);

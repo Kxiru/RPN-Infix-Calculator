@@ -7,7 +7,7 @@ public class NumStack {
 
   /**
    * A constructor for the composed class, NumStack. NumStack is a facade that is built using
-   * objects from another class (Stack).
+   * objects from another class (Stack). It addresses floats in the calculator.
    */
   public NumStack() {
     numStack = new Stack();
