@@ -1,7 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.*;
-import java.util.ArrayList;
+
 import java.util.EmptyStackException;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -67,7 +67,7 @@ class StrStackTest {
     strStack.push(Integer.toString(2));
     assertEquals(strStack.pop(), "2", "The Stack is empty when initiated.");
   }
-  
+
   @Test // Test 8 - Tests whether Stack accepts changed strings but more abstracted.
 
   void toStringTest2() throws BadTypeException {
