@@ -2,9 +2,9 @@
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/OpStack.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Driver.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Entry.java
+/home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/GuiView.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Symbol.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Type.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/BadTypeException.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/StrStack.java
-/home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/GUIView.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/NumStack.java
