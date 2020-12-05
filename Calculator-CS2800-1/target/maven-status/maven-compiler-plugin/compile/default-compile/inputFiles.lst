@@ -4,6 +4,8 @@
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Entry.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/GuiView.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Symbol.java
+/home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/ViewInterface.java
+/home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/AsciiView.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/Type.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/BadTypeException.java
 /home/keiru/eclipse-workspace/Calculator-CS2800-1/src/main/java/uk/ac/rhul/cs2800/StrStack.java
