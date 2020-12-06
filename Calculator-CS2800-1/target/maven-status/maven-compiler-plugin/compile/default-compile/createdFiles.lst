@@ -5,8 +5,10 @@ uk/ac/rhul/cs2800/StrStack.class
 uk/ac/rhul/cs2800/NumStack.class
 uk/ac/rhul/cs2800/Driver.class
 uk/ac/rhul/cs2800/ViewInterface.class
+uk/ac/rhul/cs2800/Calculator.class
 uk/ac/rhul/cs2800/Type.class
 uk/ac/rhul/cs2800/BadTypeException.class
+uk/ac/rhul/cs2800/InvalidExpression.class
 uk/ac/rhul/cs2800/Entry.class
 uk/ac/rhul/cs2800/GuiView.class
 uk/ac/rhul/cs2800/AsciiView.class

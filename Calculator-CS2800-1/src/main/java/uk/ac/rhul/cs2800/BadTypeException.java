@@ -7,6 +7,11 @@ package uk.ac.rhul.cs2800;
  */
 public class BadTypeException extends Exception {
 
+  /**
+   * BadTypeException called when an Entry is resolved to the wrong type.
+   */
+  private static final long serialVersionUID = 1L;
+
   public BadTypeException() {}
 
   /**
