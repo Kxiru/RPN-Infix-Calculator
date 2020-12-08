@@ -11,7 +11,7 @@ import java.util.EmptyStackException;
  * @author Keiru
  */
 public class Stack {
-  final String id = "$Id: Stack.java 79 2020-12-08 07:32:22Z zhac292 $";
+  final String id = "$Id$";
 
   /**
    * This ArrayList stores all of the Entries so that they can be read using RPN from the stack.
