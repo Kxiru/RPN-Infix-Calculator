@@ -17,6 +17,7 @@ public class GuiView extends Application implements ViewInterface {
   public String expression;
   public String answer;
   private volatile static GuiView instance = null;
+  public boolean showHelp = false;
 
   @FXML
   private Button calcButton;
@@ -32,6 +33,27 @@ public class GuiView extends Application implements ViewInterface {
 
   @FXML
   private TextField inputField;
+
+  @FXML
+  private Button helpButton;
+
+  @FXML
+  private Label helpLabel;
+
+  @FXML
+  void helpButtonPressed(ActionEvent event) {
+
+    if (showHelp == false) {
+      helpButton.setText("Help");
+      helpLabel.setText(
+          "Invalid Expression?\n - Check your Notation. RPN is default! \n- Leave a space after each number!");
+      showHelp = true;
+    } else {
+      helpButton.setText("Hide");
+      helpLabel.setText("");
+      showHelp = false;
+    }
+  }
 
   @Override
   public String getExpression() {
@@ -66,7 +88,7 @@ public class GuiView extends Application implements ViewInterface {
 
   public void start(Stage primaryStage) throws Exception {
     Parent root = FXMLLoader.load(getClass().getResource("/GuiView.fxml"));
-    Scene scene = new Scene(root, 800, 500);
+    Scene scene = new Scene(root, 500, 350);
     primaryStage.setScene(scene);
     primaryStage.setTitle("Your Pocket Calculator");
     primaryStage.show();
@@ -90,8 +112,4 @@ public class GuiView extends Application implements ViewInterface {
     System.out.println("Changed radio!");
     infixRadio.setOnAction(event -> f.notifyObservers());
   }
-  
-  
-
-
 }

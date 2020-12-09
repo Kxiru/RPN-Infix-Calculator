@@ -6,9 +6,13 @@ public class CalcController {
   private boolean isInfix = false;;
 
   public void handleCalculation() throws InvalidExpression, BadTypeException{
+    try {
     String userInput = myView.getExpression();
     myModel.evaluate(userInput, isInfix);
     myView.setAnswer(myModel.getValue());
+    }catch (Exception e){
+      myView.setAnswer("Invalid Expression");
+    }
   }
 
   public void handleReset() {

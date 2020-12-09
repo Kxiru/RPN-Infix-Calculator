@@ -16,6 +16,5 @@ uk/ac/rhul/cs2800/Entry.class
 uk/ac/rhul/cs2800/CalcModel.class
 uk/ac/rhul/cs2800/GuiView.class
 uk/ac/rhul/cs2800/RevPolishCalc.class
-uk/ac/rhul/cs2800/CalcView.class
 uk/ac/rhul/cs2800/AsciiView.class
 uk/ac/rhul/cs2800/Stack.class

@@ -113,5 +113,10 @@ class RevPolishCalcTest {
     assertThrows(InvalidExpression.class, () -> rpCalc.evaluate("22 +"),
         "This expression is incomplete.");
   }
+  
+  @Test // Test 15 - Precedence test
+  void precedenceTest() throws InvalidExpression, BadTypeException {
+    assertEquals(rpCalc.evaluate("2 7 * 3 4 * +"), (float) (26), "Precedence not adhered to");
+  }
 
 }

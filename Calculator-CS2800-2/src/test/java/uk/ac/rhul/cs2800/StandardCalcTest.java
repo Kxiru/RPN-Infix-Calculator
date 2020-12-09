@@ -1,6 +1,7 @@
 package uk.ac.rhul.cs2800;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -20,10 +21,15 @@ class StandardCalcTest {
   // "Temporary function stringEvaluate should return proper evaluation.");
   // }
 
+//  @Test // Test 2 - Successfully converted to rpn and was calculated.
+//  void calculationtest() throws InvalidExpression, BadTypeException {
+//    assertEquals(stand.evaluate("2+2"), (float) (4), "The answer to this RPN string should be 4.0");
+//  }
+  
   @Test // Test 2 - Successfully converted to rpn and was calculated.
   void calculationtest() throws InvalidExpression, BadTypeException {
-    assertEquals(stand.evaluate("2+2"), (float) (4), "The answer to this RPN string should be 4.0");
-  }
+    assertThrows(InvalidExpression.class, () -> stand.evaluate("2+2"),
+        "Characters in expressions should be separated by spaces");}
 
   @Test // Test 3 - Test with spaces!
   void calculationtest2() throws InvalidExpression, BadTypeException {
@@ -39,8 +45,19 @@ class StandardCalcTest {
 
   @Test // Test 5 - Test with brackets.
   void bracketstest() throws InvalidExpression, BadTypeException {
-    assertEquals(stand.evaluate("(2+5)+3"), (float) (10),
+    assertEquals(stand.evaluate("( 2 + 5 ) + 3"), (float) (10),
         "The answer to this RPN string should be 10.0");
+  }
+  
+  @Test // Test 6 - Test with brackets and no spaces.
+  void noSpaceBracketstest() throws InvalidExpression, BadTypeException {
+    assertThrows(InvalidExpression.class, () -> stand.evaluate("(2+2)"),
+        "Characters in expressions should be separated by spaces");
+  }
+  
+  @Test // Test 7 - Precedence test
+  void precedencetest() throws InvalidExpression, BadTypeException {
+    assertEquals(stand.evaluate("2 * 7 + 3 * 4 "), (float) (26), "Precedence not adhered to");
   }
 
 }

@@ -6,6 +6,10 @@ public class CalcModel {
   private StandardCalc standard = new StandardCalc();
 
   public float evaluate(String expr, boolean isInfix) throws InvalidExpression, BadTypeException{
+    if(expr == null || expr.equals("") || expr.equals(" ")) {
+      answer = 0;
+      return answer;
+    }
     if(isInfix) {
       answer = standard.evaluate(expr);
       return answer;
@@ -16,7 +20,7 @@ public class CalcModel {
   }
 
   public void reset() {
-    answer = 1;
+    answer = 0;
   }
 
   public String getValue() {
