@@ -5,12 +5,19 @@ public class CalcController {
   private CalcModel myModel;
   private boolean isInfix = false;;
 
-  public void handleCalculation() throws InvalidExpression, BadTypeException{
+  public void handleCalculation() throws InvalidExpression, BadTypeException {
     try {
-    String userInput = myView.getExpression();
-    myModel.evaluate(userInput, isInfix);
-    myView.setAnswer(myModel.getValue());
-    }catch (Exception e){
+
+      String userInput = myView.getExpression();
+      myModel.evaluate(userInput, isInfix);
+
+      if (myModel.getValue().equals("Infinity")) {
+        myView.setAnswer("Cannot Divide by Zero!");
+      } else {
+        myView.setAnswer(myModel.getValue());
+      }
+
+    } catch (Exception e) {
       myView.setAnswer("Invalid Expression");
     }
   }
@@ -19,19 +26,19 @@ public class CalcController {
     myModel.reset();
     myView.setAnswer(myModel.getValue());
   }
-  
+
   public void handleExpression() {
-    if(isInfix) {
+    if (isInfix) {
       isInfix = false;
     } else {
       isInfix = true;
     }
   }
 
-  CalcController(CalcModel model, ViewInterface view){
+  CalcController(CalcModel model, ViewInterface view) {
     myModel = model;
     myView = view;
-    
+
     view.addCalcObserver(() -> {
       try {
         handleCalculation();

@@ -6,11 +6,11 @@ public class CalcModel {
   private StandardCalc standard = new StandardCalc();
 
   public float evaluate(String expr, boolean isInfix) throws InvalidExpression, BadTypeException{
-    if(expr == null || expr.equals("") || expr.equals(" ")) {
+    if (expr == null || expr.equals("") || expr.equals(" ")) {
       answer = 0;
       return answer;
     }
-    if(isInfix) {
+    if (isInfix) {
       answer = standard.evaluate(expr);
       return answer;
     } else {

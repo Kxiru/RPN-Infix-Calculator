@@ -59,5 +59,10 @@ class StandardCalcTest {
   void precedencetest() throws InvalidExpression, BadTypeException {
     assertEquals(stand.evaluate("2 * 7 + 3 * 4 "), (float) (26), "Precedence not adhered to");
   }
+  
+  @Test // Test 8 - Big number test
+  void bigNumbertest() throws InvalidExpression, BadTypeException {
+    assertEquals(stand.evaluate("2534 * 7432 "), (float) (18832688), "Precedence not adhered to");
+  }
 
 }
