@@ -14,7 +14,7 @@ public class AsciiView implements ViewInterface {
 
   @Override
   public String getExpression() {
-    return null;
+    return expression;
   }
 
   @Override
@@ -36,14 +36,18 @@ public class AsciiView implements ViewInterface {
       String t = s.next();
       switch (t.toUpperCase().charAt(0)) {
         case 'C':
-
-
-
+          System.out.printf("Please provide your expression:");
+          expression = s.next();
           break;
+          
         case 'R':
+          answer = "";
+          expression = "";
           break;
+          
         case 'N':
           System.out.printf("Enter \n{I} for Infix Notation or \n{R} for Reverse Polish Notation");
+          
           if (s.next().toUpperCase().charAt(0) == 'R') {
             System.out.println("Notation set to Reverse Polish Notation.");
             infixNotation = false;
@@ -54,10 +58,12 @@ public class AsciiView implements ViewInterface {
             System.out.printf("Your input was invalid. Returning to Menu.");
           }
           break;
+          
         case 'Q':
           System.out.println("Bye");
           finished = true;
           break;
+          
         default:
           help();
       }
