@@ -2,6 +2,12 @@ package uk.ac.rhul.cs2800;
 
 import java.util.Scanner;
 
+/**
+ * The ASCIIView allows for Console use of the Calculator.
+ * 
+ * @author Keiru
+ *
+ */
 public class AsciiView implements ViewInterface {
 
   public String expression;
@@ -13,11 +19,19 @@ public class AsciiView implements ViewInterface {
   Observer calc = null;
   Observer reset = null;
 
+  /**
+   * getExpression() retrieves the expression from the user to be evaluated.
+   */
   @Override
   public String getExpression() {
     return expression;
   }
 
+  /**
+   * setAnswer() changes the value of answer to the calculated answer.
+   * 
+   * @param str sets the answer to str.
+   */
   @Override
   public void setAnswer(String str) {
     this.answer = str;
@@ -25,7 +39,7 @@ public class AsciiView implements ViewInterface {
   }
 
   /**
-   * A menu / console based view.
+   * menu() creates a console based view of the system.
    */
   @Override
   public void menu() {
@@ -76,7 +90,7 @@ public class AsciiView implements ViewInterface {
           System.out.printf("Your input was invalid. Returning to Menu.\n");
           infix.notifyObservers();
           break;
-          
+
         case 'L':
           System.out.printf("Your answer was: %s\n", answer);
           break;
@@ -94,6 +108,9 @@ public class AsciiView implements ViewInterface {
     s.close();
   }
 
+  /**
+   * help() lists the ASCII navigation menu.
+   */
   private void help() {
     System.out.printf("\n > Please select from one of the following:\n");
     System.out.println("  ----------------------- ");
@@ -105,16 +122,25 @@ public class AsciiView implements ViewInterface {
     System.out.println("  ----------------------- ");
   }
 
+  /**
+   * This observer listens to evaluate the stored expression.
+   */
   @Override
   public void addCalcObserver(Observer f) {
     calc = f;
   }
 
+  /**
+   * This observer listens to reset the calculator.
+   */
   @Override
   public void addResetObserver(Observer f) {
     reset = f;
   }
 
+  /**
+   * This observer listens to return the type of notation that is currently selected.
+   */
   @Override
   public void addExpressionObserver(Observer f) {
     infix = f;

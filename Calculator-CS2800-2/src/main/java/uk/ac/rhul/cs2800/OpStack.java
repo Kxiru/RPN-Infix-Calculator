@@ -2,6 +2,11 @@ package uk.ac.rhul.cs2800;
 
 import java.util.EmptyStackException;
 
+/**
+ * Implements a stack of symbols.
+ * @author Keiru
+ *
+ */
 public class OpStack {
   private Stack opStack;
 

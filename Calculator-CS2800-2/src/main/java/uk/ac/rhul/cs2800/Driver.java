@@ -7,6 +7,11 @@ package uk.ac.rhul.cs2800;
  */
 public class Driver {
 
+  /**
+   * Main class. The driver chooses which view to initialise and choose.
+   * 
+   * @param args Console line arguments;
+   */
   public static void main(String[] args) {
 
     ViewInterface view = new AsciiView();
@@ -14,7 +19,6 @@ public class Driver {
     CalcModel model = new CalcModel();
 
     if (System.console() == null) {
-      System.out.println("GUI View!");
       view = GuiView.getInstance();
     }
 

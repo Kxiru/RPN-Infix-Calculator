@@ -12,6 +12,9 @@ public class BadTypeException extends Exception {
    */
   private static final long serialVersionUID = 1L;
 
+  /**
+   * Empty constructor.
+   */
   public BadTypeException() {}
 
   /**

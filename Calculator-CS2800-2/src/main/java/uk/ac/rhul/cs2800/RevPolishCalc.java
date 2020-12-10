@@ -9,6 +9,9 @@ public class RevPolishCalc implements Calculator {
 
   NumStack values = new NumStack();
 
+  /**
+   * Evaluates a string, what that is provided in reverse polish notation. Returns a float.
+   */
   @Override
   public float evaluate(String what) throws InvalidExpression, BadTypeException {
     String[] operands = what.split(" ");

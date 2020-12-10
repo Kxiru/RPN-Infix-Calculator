@@ -1,10 +1,23 @@
 package uk.ac.rhul.cs2800;
 
+/**
+ * CalcController creates views and models. Adds itself as an observer to the view so that
+ * asynchronous changes can be observed.
+ * 
+ * @author Keiru
+ *
+ */
 public class CalcController {
   private ViewInterface myView;
   private CalcModel myModel;
-  private boolean isInfix = false;;
+  private boolean isInfix = false;
 
+  /**
+   * handleCalculation() catches exceptions and evaluates expressions.
+   * 
+   * @throws InvalidExpression The expression is invalid.
+   * @throws BadTypeException The type is invalid.
+   */
   public void handleCalculation() throws InvalidExpression, BadTypeException {
     try {
       String userInput = myView.getExpression();
@@ -21,11 +34,17 @@ public class CalcController {
     }
   }
 
+  /**
+   * Is notified when a request for a calculator is called.
+   */
   public void handleReset() {
     myModel.reset();
     myView.setAnswer(myModel.getValue());
   }
 
+  /**
+   * Is notified when a calculation is required.
+   */
   public void handleExpression() {
     if (isInfix) {
       isInfix = false;
@@ -34,6 +53,12 @@ public class CalcController {
     }
   }
 
+  /**
+   * CalcController is a constructor that creates the interface given certain parameters.
+   * 
+   * @param model The type of calculator. Infix / Reverse Polish Notation.
+   * @param view The type of interface. GUI / ASCII view.
+   */
   CalcController(CalcModel model, ViewInterface view) {
     myModel = model;
     myView = view;

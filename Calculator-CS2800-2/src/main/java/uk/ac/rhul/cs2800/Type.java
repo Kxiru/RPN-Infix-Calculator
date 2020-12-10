@@ -10,7 +10,6 @@ package uk.ac.rhul.cs2800;
 public enum Type {
   NUMBER, SYMBOL, STRING, INVALID;
 
-
   /**
    * The toString() method allows for the type to be displayed in console.
    */

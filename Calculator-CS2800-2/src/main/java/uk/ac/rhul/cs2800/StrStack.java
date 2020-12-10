@@ -2,6 +2,13 @@ package uk.ac.rhul.cs2800;
 
 import java.util.EmptyStackException;
 
+/**
+ * The Shunting algorithm requires reversing an expression in order to evaluate left to right - so
+ * we provide a facade to hide details.
+ * 
+ * @author keiru
+ *
+ */
 public class StrStack {
   private Stack strStack;
 

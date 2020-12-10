@@ -2,6 +2,11 @@ package uk.ac.rhul.cs2800;
 
 import java.util.EmptyStackException;
 
+/**
+ * A facade to hide details. Used in calculating with Reverse Polish Notation.
+ * @author Keiru
+ *
+ */
 public class NumStack {
   private Stack numStack;
 

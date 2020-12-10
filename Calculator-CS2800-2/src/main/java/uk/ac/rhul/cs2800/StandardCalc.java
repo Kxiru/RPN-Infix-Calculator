@@ -1,22 +1,31 @@
 package uk.ac.rhul.cs2800;
 
-import java.util.Arrays;
-
+/**
+ * Evaluates infix string expressions.
+ * 
+ * @author Keiru
+ *
+ */
 public class StandardCalc implements Calculator {
 
   StrStack values = new StrStack();
   RevPolishCalc rpCalc = new RevPolishCalc();
 
+  /**
+   * Evaluates a string, what, that is provided in infix notation. Returns a float. This method also
+   * calls on the RPN calculator as it uses the Shunting algorithm to convert from infix notation to
+   * Reverse Polish Notation.
+   */
   @Override
   public float evaluate(String what) throws InvalidExpression, BadTypeException {
     // Convert to RPC
-    
+
     String rpcConverted = "";
     String[] operands = what.split(" ");
-    //System.out.println(Arrays.toString(operands));
+    // System.out.println(Arrays.toString(operands));
 
     for (int i = 0; i < operands.length; ++i) {
-      
+
       String c = operands[i];
 
       if (isNumeric(c)) {
@@ -41,7 +50,7 @@ public class StandardCalc implements Calculator {
       }
       rpcConverted += values.pop() + " ";
     }
-    
+
     System.out.println("RPC is:" + rpcConverted);
     float answer = rpCalc.evaluate(rpcConverted);
     return answer;
@@ -62,6 +71,12 @@ public class StandardCalc implements Calculator {
     }
   }
 
+  /**
+   * getPrecedence is necessary to decide which order certain expressions should be executed in.
+   * 
+   * @param ch a string that will be a symbol.
+   * @return returns an integer according to the level of precedence.
+   */
   static int getPrecedence(String ch) {
     if (ch.equals("+") || ch.equals("-")) {
       return 1;

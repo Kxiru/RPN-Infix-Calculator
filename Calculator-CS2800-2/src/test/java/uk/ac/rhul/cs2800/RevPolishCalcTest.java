@@ -83,7 +83,8 @@ class RevPolishCalcTest {
 
   @Test // Test 10.5 - No flukes. Let's try that again with multiple double digits
   void divideByZeroTest() throws InvalidExpression, BadTypeException {
-    assertEquals(rpCalc.evaluate("2 0 /"), (float) (2), "This should not have an answer.");
+    assertEquals(rpCalc.evaluate("2 0 /"), Float.POSITIVE_INFINITY,
+        "This should not have an answer other than inifity. This error will be caught later on.");
   }
 
   @Test // Test 11 - Since my code delimits using spaces, this should also mean that double digits

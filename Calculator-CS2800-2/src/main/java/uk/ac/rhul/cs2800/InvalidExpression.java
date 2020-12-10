@@ -1,11 +1,20 @@
 package uk.ac.rhul.cs2800;
 
+/**
+ * InvalidExpression exception for invalid expressions.
+ * 
+ * @author Keiru
+ *
+ */
 public class InvalidExpression extends Exception {
   /**
    * InvalidExpression passed when a non-String is passed.
    */
   private static final long serialVersionUID = 1L;
 
+  /**
+   * Empty constructor.
+   */
   public InvalidExpression() {}
 
   /**

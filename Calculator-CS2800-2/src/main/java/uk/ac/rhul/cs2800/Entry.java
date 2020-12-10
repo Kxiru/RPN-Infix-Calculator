@@ -93,7 +93,6 @@ public class Entry {
     return number;
   }
 
-
   /**
    * This method deduces whether the Entry is equal to another entry. This method implements
    * hashCode().
