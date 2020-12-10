@@ -7,7 +7,6 @@ public class CalcController {
 
   public void handleCalculation() throws InvalidExpression, BadTypeException {
     try {
-
       String userInput = myView.getExpression();
       myModel.evaluate(userInput, isInfix);
 
@@ -43,9 +42,9 @@ public class CalcController {
       try {
         handleCalculation();
       } catch (InvalidExpression e) {
-        e.printStackTrace();
+        System.out.println("Something went wrong!");
       } catch (BadTypeException e) {
-        e.printStackTrace();
+        System.out.println("Something went wrong!");
       }
     });
     view.addResetObserver(this::handleReset);

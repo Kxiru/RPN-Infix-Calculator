@@ -46,7 +46,6 @@ public class RevPolishCalc implements Calculator {
             throw new InvalidExpression("Your expression was invalid. Try again.");
           }
           break;
-
         case "/":
           try {
             val1 = values.pop();

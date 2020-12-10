@@ -55,7 +55,7 @@ public class StandardCalc implements Calculator {
    */
   private static boolean isNumeric(String c) {
     try {
-      Integer.parseInt(c);
+      Float.parseFloat(c);
       return true;
     } catch (Exception e) {
       return false;

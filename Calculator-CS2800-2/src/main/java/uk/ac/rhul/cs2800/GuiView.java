@@ -87,12 +87,13 @@ public class GuiView extends Application implements ViewInterface {
   }
 
   public void start(Stage primaryStage) throws Exception {
-    Parent root = FXMLLoader.load(getClass().getResource("/GuiView.fxml"));
-    Scene scene = new Scene(root, 500, 350);
-    primaryStage.setScene(scene);
-    primaryStage.setTitle("Your Pocket Calculator");
-    primaryStage.show();
-  }
+ 
+      Parent root = FXMLLoader.load(getClass().getResource("/GuiView.fxml"));
+      Scene scene = new Scene(root, 500, 350);
+      primaryStage.setScene(scene);
+      primaryStage.setTitle("Your Pocket Calculator");
+      primaryStage.show();
+    }
 
   @Override
   public void addCalcObserver(Observer f) {
