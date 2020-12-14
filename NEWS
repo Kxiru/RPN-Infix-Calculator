@@ -1,0 +1,27 @@
+>> This file will contain descriptions of Tags and Releases. <<
+
+---NEWS---
+
+10/12/20 - THIRD RELEASE of Calculator (Calculator-CS2800-3.0) is available!
+
+- With a fully functional interface and system, we've got you covered even if you decide to work from your console, just run your jar file!
+- All prior bugs fixed.
+- Calculator compatible with decimal input.
+- Help menu implemented on the GUI View.
+
+-------------------------------------------------------------------->
+
+9/12/20 - SECOND RELEASE of Calulator (Calculator-CS2800-2.0) is available!
+
+- With an aesthetic and functional new UI,
+- The calculator is capable of doing intricate sums in both infix and reverse polish notation,
+- Our new GUI can even tell you when your expression is invalid!
+- A console version of the system is in the works.
+- Divide by Zero errors addressed and all prior bugs fixed.
+
+-------------------------------------------------------------------->
+
+8/12/20 - FIRST RELEASE of Calculator (Calculator-CS2800-1.0) is available.
+
+- Still a little buggy, however it is a fully implemented Calculator capable of doing basic sums.
+- This version has a bug where it can neither parse brackets, nor execute basic sums that involve double (or more) digits in Standard Notation. This will be fixed in the next release.
