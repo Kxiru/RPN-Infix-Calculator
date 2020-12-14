@@ -1,0 +1,7 @@
+Included in this project:
+- Javadoc index.html file - Calculator-CS2800-3.0/target/side-apidocs/index.html
+- A runnable .jar file
+
+I enjoyed creating a calculator from scratch in my undergraduate Software Engineering module. It took 2 types of input; Reverse Polish Notation, and Infix Notation, and I used design patterns such as Observers to create a Java Maven project. The runnable application had both a JavaFX UI interface, as well as a command line interface, and was created using Test Driven Development.
+
+I also used Javadoc for documentation purposes and JUnit test cases for testing. It was a wholesome project that was challenging but also highly rewarding and I learnt a lot from it. Additionally, the project was done using SVN as my version control system, although I am also familiar with Git. I did this project on the Linux Mint OS and I am comfortable using both Windows and LM.
